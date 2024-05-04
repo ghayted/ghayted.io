@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleLogin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"   />
+
+    <title>login</title>
+</head>
+<body>
+    <div class="imag"><img src="https://www.assurementleasing.fr/wp-content/uploads/2022/05/meilleure-voiture-electrique-haut-de-gamme.jpg" alt="image"></div>
+    <div class="box">
+        <h1 id="titre">Sign up</h1>
+        <div class="group">
+            <div class="champ" id="nomchamp">
+                <i class="fa-solid fa-user"></i>
+                <input id="name" type="text" placeholder="Name">
+            </div>
+
+            <div class="champ">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="mail" type="email" placeholder="email" >
+                <span id="s2" style="color: red;"></span>
+            </div>
+             
+            <div class="champ">
+                <i class="fa-sharp fa-solid fa-key"></i>
+                <input id="password" type="password" placeholder="password">
+                <span id="s1" style="color: red;"></span>
+            </div>
+        <p>Lost password <a href="https://support.google.com/accounts/answer/41078?hl=fr&co=GENIE.Platform%3DAndroid"target="_blank">Click Here !</a></p>
+        </div>
+        <div id="add">
+            <button >sign up</button>
+        </div>
+        <div id="connect">
+            <button >sign in</button>
+        </div>
+        <span id="s3" style="color: red;"></span>
+      <div class="button">
+            <button type="button" id="signupbtn" >Sign up</button>
+            <button type="button"  id="signinbtn"class="disable">Sign in</button>
+           <div class="login" >
+                 <a id="log" class="sup" href="home.html">Login</a>
+           </div>
+
+        </div> 
+           <div class="show" id="show"><button><i class="fa-sharp fa-solid fa-eye-slash"></i></button></div>
+           <div class="hide" id="hide"><button><i class="fa-sharp fa-solid fa-eye"></i></button></div>
+    </div>
+
+    <script>
+          var users = [{ mail :'ghayt@gmail.com', password:'azerty12' },
+        { mail :'hamza@gmail.com', password:'12345678' } ]
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let nomchamp = document.getElementById("nomchamp");
+        let  login = document.getElementById("log");
+        let titre = document.getElementById("titre");
+        let inscrit = document.getElementById("add");
+        let connect = document.getElementById("connect");
+        let show =document.getElementById("show");
+        let hide =document.getElementById("hide");
+        connect.style.display = "none";
+        hide.style.diplay ="none";
+         login.href = "javascript:void(0)";
+            login.onclick = null;
+            hide.style.display = "none";
+          
+           show.onclick = function (){
+            var passInput = document.getElementById('password');
+             show.style.display ="none";
+                
+                    passInput.type = 'text'
+           
+           hide.style.display = "block";
+        } 
+         
+        hide.onclick = function (){
+            var passInput = document.getElementById('password');
+              passInput.type = 'password'
+            hide.style.display = "none";
+            show.style.display ="block";
+            
+          
+            
+
+        }
+        
+        signinbtn.onclick = function (){
+            var passInput = document.getElementById('password');
+              passInput.type = 'password'
+            hide.style.display = "none";
+           show.style.display = "none";
+            document.getElementById('s2').innerHTML = ''
+            
+            document.getElementById('s1').innerHTML = ''
+            inscrit.style.display = "none";
+            nomchamp.style.maxHeight= "0";
+            titre.innerHTML= "Sign In";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable");
+            
+            setTimeout(function() { 
+            show.style.display = "block";
+            show.style.marginTop = "-200px";
+            hide.style.marginTop = "-200px";
+           
+            
+           
+        }, 290);
+            setTimeout(function() {
+        connect.style.display = "block";
+    }, 290);
+        }
+        
+
+
+
+        signupbtn.onclick = function (){
+            var passInput = document.getElementById('password');
+              passInput.type = 'password'
+            setTimeout(function() {
+        inscrit.style.display = "block";
+    }, 290);
+    document.getElementById('s3').innerHTML = ''
+
+            show.style.display = "none";
+            hide.style.display = "none";
+            nomchamp.style.maxHeight= "60px";
+            titre.innerHTML= "Sign Up";
+            signinbtn.classList.add("disable");
+            signupbtn.classList.remove("disable");
+            connect.style.display = "none";
+            setTimeout(function() { 
+            show.style.display = "block";
+            show.style.marginTop = "-148px";
+            hide.style.marginTop = "-148px";
+    
+           
+        }, 290);
+        }
+
+
+
+
+         
+      inscrit.onclick = function (){
+        var mailValue = document.getElementById('mail').value;
+    var passValue = document.getElementById('password').value;
+    var mailValue = document.getElementById('mail').value;
+    var passValue = document.getElementById('password').value;
+    for(var i=0; i<users.length;i++){
+
+      if(mailValue == users[i].mail){
+        document.getElementById('s2').innerHTML = 'cet email existe deja'
+        return false;
+      }
+    }
+    if (mailValue == ''){
+        document.getElementById('s2').innerHTML = 'enter email '
+    } else{
+        document.getElementById('s2').innerHTML = ''
+    }
+    if(passValue.length < 8 ){
+
+   document.getElementById('s1').innerHTML = 'password must contains 8 chars'
+    
+    }else{
+        document.getElementById('s1').innerHTML = ''
+        var user = {};
+
+ user.mail = mailValue;
+ user.password= passValue;
+
+ users.push(user);
+ console.log(users);
+ 
+    }
+      }
+     
+        connect.onclick = function (){
+            var mailValue = document.getElementById('mail').value;
+    var passValue = document.getElementById('password').value;
+    for(var i=0; i<users.length;i++){
+
+      if(mailValue == users[i].mail && passValue == users[i].password){ 
+        document.getElementById('s3').innerHTML = ''
+
+         login.classList.add("sup");
+                 login.href = "home.html";
+                 login.style.cursor='pointer';
+    login.onclick = login;
+    return true;
+}
+}
+ login.href = "javascript:void(0)";
+            login.onclick = null;
+document.getElementById('s3').innerHTML = 'mail or password incorrect'
+login.style.cursor='not-allowed';
+document.getElementById('s3').style.position = 'absolute';
+document.getElementById('s3').style.marginTop='-110px';
+document.getElementById('s3').style.marginLeft='-165px';
+document.getElementById('s3').style.fontSize='13px'
+
+        }
+    
+    
+        
+    </script>
+</body>
+</html>

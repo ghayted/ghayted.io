@@ -1,0 +1,322 @@
+*{
+  margin: 0;
+    transition: 0.6s ease-in-out;
+    
+}
+body{
+background-color: rgb(251, 251, 251);
+
+
+}
+nav{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+   margin-left:-20px;
+   width: 1550px;
+   margin-top: -10px;
+   position:fixed ;
+   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.505), 0 6px 15px 0 rgba(255, 255, 255, 0.19);;
+   height: 58px;
+   z-index: +1;
+}
+nav h1{
+    
+    color:  #000000;
+
+    margin-left:  3%;
+   margin-top: 13px;
+   font-family: 'Audi Type', sans-serif;
+    
+   font-size: 33px;
+  
+  width: 150px;
+}
+a{
+    
+    color: white;
+    text-decoration: none;
+}
+nav ul{
+
+ position: absolute;
+    
+   left:30%;
+   
+    margin-top: -28px;
+    font-size:15px;
+}
+
+nav ul   #logout{
+   
+    width: 15%;
+    position: absolute;
+   
+    padding-top: 9px;
+    left:160%;
+    margin-top: -9px;
+}
+
+nav ul a{
+    
+    font-family: 'Audi Type', sans-serif;   
+    color: #000000;
+    margin: 40px;
+    position: relative; 
+    padding-bottom: 7.5px;
+
+  
+  }
+  
+  nav ul a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+    
+  }
+  
+  nav ul a:hover::before {
+    width: 100%;
+  }
+body .image img{
+  
+
+    margin-top: 49px;
+    margin-left: -8px;
+   
+    filter: brightness(40%);
+    width: 100.55%;
+    height:550px;
+}
+body .image img:hover{
+ 
+    filter: brightness(20%);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    
+  
+}
+body .image h1{
+   font-family: Georgia, serif;
+    margin-top: -450px;
+    color: white;
+    position: relative;
+
+    list-style: none;
+    font-size: 2.7em;
+    
+}
+body .image h2{
+    font-family: Georgia, serif;
+    position: relative;
+    margin-top: 200px;
+   
+    color: white;
+    margin-bottom: 55px;
+}
+body .image a{
+    font-family: Georgia, serif;
+    position: relative;
+    border: 1px solid currentColor;
+    border-width: 2px;
+  left:43%;
+  
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    padding: 15px 30px 15px 30px;
+}
+body .image a:hover{
+    background-color: rgba(0, 0, 0, 0.884);
+   color: rgb(246, 246, 246);
+    
+}
+
+body .box {
+    
+    border-radius: 10px;
+    margin-top: 80px;
+    position: relative;
+    background-color: #ffffff;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+   padding-top: 20px;
+   padding-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+body .box .description img {
+    position: relative;
+    margin-top: 30px;
+    width: 270px;
+    height: 150px;
+    border-radius: 20px;
+
+    margin-bottom:30px;
+
+}
+body .box .description {
+  
+    font-family: 'Audi Type', sans-serif;   
+    font-size: 19px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 24%; 
+    padding: 20px 50px;
+    vertical-align: top;
+     
+}
+.line{
+    margin-top: 30px;
+
+    width: 50%;
+    background-color:  #000000;
+    height:3.5px;
+    transform: translate(50%);
+    border-radius: 50px;
+    
+}.line2{
+  
+    width: 50%; 
+    background-color:  #000000;
+    height:3px;
+    transform: translate(50%);
+    border-radius: 50px;
+    
+} 
+.sponsor{
+ margin-top: 100px;
+   position: relative;
+   height: 500px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+   border-radius: 20px;
+   width: 90%;
+    text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+.sponsor h2{
+    font-size: 50px;
+    font-family: 'Audi Type', sans-serif;
+    
+}
+.line3{
+    position:relative;
+    text-align: center;
+    width: 10%;
+    left: 40%;
+    background-color:  #000000;
+    height:3.5px;
+    transform: translate(50%);
+    border-radius: 50px;
+}
+
+.champ {
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+   
+  }
+  
+
+.sponsor .champ img{
+   
+   padding: 10px;
+    position: relative;
+    border-radius: 50px;
+    width: 400px;
+   height:300px;
+    
+}
+.photo h3{
+    font-size: 20px;
+    font-family: 'Audi Type', sans-serif;
+    
+}
+#about{
+    margin-top: 200px;
+    width: 100%;
+    height: 90vh;
+    background-color: #000000;
+}
+.blocicone a {
+    font-size:30px;
+    
+    padding: 20px;
+}
+.blocicone{
+    margin-top: 20px;
+    padding: 10px 0px;
+    position: relative;
+    display: inline-block;
+   
+    position: relative;
+    left: 80%;
+}
+.box2{
+    padding: 20px ;
+    position: relative;
+    display: flex;
+}
+.champ2 {
+    padding: 0px 180px 0px 50px;
+    position: relative;
+    font-family: 'Audi Type', sans-serif;
+    color: #ffffff;
+    
+    left: 80px;
+}
+.champ2 h2{
+    font-weight: 200;
+    margin-bottom: 50px;
+  
+}
+.champ2 p{
+    font-weight: 100;
+    font-size: 15px;
+    font-family: 'Audi Type', sans-serif;
+    padding:0px 0px 20px 0px;
+    
+}
+.line4{
+    width: 80%;
+    height: 1px;
+    background-color: #5f5f5f;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+ .descri{
+
+    width: 80%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+.descri p{
+    padding: 0px 0px 30px 0px;
+    font-size: 14px;
+    font-family: 'Audi Type', sans-serif;
+    color: #ffffff;
+}
+.up{
+  
+    margin-top: -610px;
+    position: absolute;
+    left: 94%;
+  
+  }
+  .up a{
+    color: white;
+    font-family: 'Audi Type', sans-serif;
+  }
